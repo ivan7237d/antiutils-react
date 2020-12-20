@@ -1,0 +1,131 @@
+{
+  "name": "antiutils-react",
+  "version": "1.0.0",
+  "description": "Glue between Antiutils and React",
+  "main": "build/main/index.js",
+  "typings": "build/main/index.d.ts",
+  "module": "build/module/index.js",
+  "repository": "https://github.com/ivan7237d/antiutils-react.git",
+  "homepage": "https://ivan7237d.github.io/antiutils-react/",
+  "license": "MIT",
+  "keywords": [],
+  "scripts": {
+    "prebuild": "rm -rf build",
+    "build": "run-p build:*",
+    "build:main": "tsc -p tsconfig.json",
+    "build:module": "tsc -p tsconfig.module.json",
+    "fix": "run-s fix:*",
+    "fix:prettier": "prettier \"src/**/*.{ts,tsx}\" --write",
+    "fix:lint": "eslint src --ext .ts,.tsx --fix",
+    "test": "run-s build test:*",
+    "test:lint": "eslint src --ext .ts,.tsx",
+    "test:prettier": "prettier \"src/**/*.{ts,tsx}\" --list-different",
+    "test:unit": "jest",
+    "watch:build": "tsc -p tsconfig.json -w",
+    "watch:test": "jest --watch",
+    "doc": "run-s doc:html && open-cli build/docs/index.html",
+    "doc:html": "typedoc --inputFiles src/index.ts --exclude \"**/*.test.+(ts|tsx)\" --target ES6 --mode file --out build/docs --excludeNotExported",
+    "doc:json": "typedoc --inputFiles src/index.ts --exclude \"**/*.test.+(ts|tsx)\" --target ES6 --mode file --json build/docs/typedoc.json --excludeNotExported",
+    "doc:publish": "gh-pages -m \"[ci skip] Updates\" -d build/docs",
+    "version": "standard-version",
+    "reset-hard": "git clean -dfx && git reset --hard && yarn",
+    "release:prepare": "run-s test doc:html version doc:publish",
+    "release": "run-s release:prepare",
+    "commit": "cz"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "devDependencies": {
+    "@babel/preset-env": "7.12.11",
+    "@babel/preset-react": "7.12.10",
+    "@babel/preset-typescript": "7.12.1",
+    "@testing-library/react": "11.2.2",
+    "@types/jest": "26.0.15",
+    "@types/react": "17.0.0",
+    "@types/react-dom": "17.0.0",
+    "@typescript-eslint/eslint-plugin": "4.0.1",
+    "@typescript-eslint/parser": "4.0.1",
+    "antiutils": "2.0.0",
+    "babel-jest": "26.6.3",
+    "commitizen": "4.2.2",
+    "cz-conventional-changelog": "3.3.0",
+    "eslint": "7.8.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-eslint-comments": "3.2.0",
+    "eslint-plugin-import": "2.22.0",
+    "gh-pages": "3.1.0",
+    "jest": "26.6.1",
+    "npm-run-all": "4.1.5",
+    "open-cli": "6.0.1",
+    "prettier": "2.1.1",
+    "react": "17.0.1",
+    "react-dom": "17.0.1",
+    "standard-version": "9.0.0",
+    "ts-node": "9.0.0",
+    "typedoc": "0.19.0",
+    "typescript": "4.0.2"
+  },
+  "peerDependencies": {
+    "antiutils": "2.x",
+    "react": "16.x || 17.x"
+  },
+  "files": [
+    "build/main",
+    "build/module",
+    "!**/*.test.*",
+    "!**/*.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "jest": {
+    "roots": [
+      "<rootDir>/src/"
+    ],
+    "testRegex": "(\\.test)\\.(ts|tsx|js|jsx)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "jsx"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-conventional-changelog",
+      "disableScopeLowerCase": true,
+      "disableSubjectLowerCase": true,
+      "types": {
+        "feat": {
+          "description": "A new feature",
+          "title": "Features"
+        },
+        "fix": {
+          "description": "A bug fix",
+          "title": "Bug Fixes"
+        },
+        "docs": {
+          "description": "Documentation only changes",
+          "title": "Documentation"
+        },
+        "refactor": {
+          "description": "A code change that neither fixes a bug nor adds a feature",
+          "title": "Code Refactoring"
+        },
+        "chore": {
+          "description": "Other changes that don't modify src or test files",
+          "title": "Chores"
+        },
+        "revert": {
+          "description": "Reverts a previous commit",
+          "title": "Reverts"
+        }
+      }
+    }
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true
+  }
+}
