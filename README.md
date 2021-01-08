@@ -2,7 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/antiutils-react.svg)](https://badge.fury.io/js/antiutils-react)
 [![gzip size](https://badgen.net/bundlephobia/minzip/antiutils-react?color=green)](https://bundlephobia.com/result?p=antiutils-react)
-[![gzip size](https://badgen.net/bundlephobia/tree-shaking/antiutils-react)](https://bundlephobia.com/result?p=antiutils-react)
+[![tree shaking](https://badgen.net/bundlephobia/tree-shaking/antiutils-react)](https://bundlephobia.com/result?p=antiutils-react)
 
 Glue between [Antiutils](https://github.com/ivan7237d/antiutils) and React. Provides the following helper functions:
 
