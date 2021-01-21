@@ -4,11 +4,11 @@
 [![gzip size](https://badgen.net/bundlephobia/minzip/antiutils-react?color=green)](https://bundlephobia.com/result?p=antiutils-react)
 [![tree shaking](https://badgen.net/bundlephobia/tree-shaking/antiutils-react)](https://bundlephobia.com/result?p=antiutils-react)
 
-Glue between [Antiutils](https://github.com/ivan7237d/antiutils) and React. Provides the following helper functions:
+Glue between [Antiutils](https://github.com/ivan7237d/antiutils) and React. Provides the following utilities:
 
 - [`useStateView`](https://github.com/ivan7237d/antiutils-react/blob/master/src/internal/useStateView.ts): wraps `useState` hook, converting the returned value to a `StateView`.
 
-- [`bindingProps`](https://github.com/ivan7237d/antiutils-react/blob/master/src/internal/bindingProps.ts): a helper function that converts a `StateView` into an object with props that React input components (other than checkboxes) understand, so `{ get, set }` would be transformed into `{ value: get(), onChange: ({ currentTarget: { value } }) => set(value) }`.
+- [`bindingProps`](https://github.com/ivan7237d/antiutils-react/blob/master/src/internal/bindingProps.ts): a helper function that converts a `StateView` into an object with props that React input components other than checkboxes understand, so `{ get, set }` would be transformed into `{ value: get(), onChange: ({ currentTarget: { value } }) => set(value) }`.
 
 - [`bindingPropsCheckbox`](https://github.com/ivan7237d/antiutils-react/blob/master/src/internal/bindingPropsCheckbox.ts): a version of `bindingProps` for checkboxes: transforms `{ get, set }` into `{ checked: get(), onChange: ({ currentTarget: { checked } }) => set(checked) }`.
 
