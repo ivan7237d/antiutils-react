@@ -1,6 +1,6 @@
 # antiutils-react
 
-[![npm version](https://badge.fury.io/js/antiutils-react.svg)](https://badge.fury.io/js/antiutils-react)
+[![npm version](https://img.shields.io/npm/v/antiutils-react.svg?style=flat&color=brightgreen)](https://github.com/ivan7237d/antiutils-react)
 [![gzip size](https://badgen.net/bundlephobia/minzip/antiutils-react?color=green)](https://bundlephobia.com/result?p=antiutils-react)
 [![tree shaking](https://badgen.net/bundlephobia/tree-shaking/antiutils-react)](https://bundlephobia.com/result?p=antiutils-react)
 
