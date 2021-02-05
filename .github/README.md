@@ -1,8 +1,9 @@
 # antiutils-react
 
-[![npm version](https://img.shields.io/npm/v/antiutils-react.svg?style=flat&color=brightgreen)](https://github.com/ivan7237d/antiutils-react)
+[![npm version](https://img.shields.io/npm/v/antiutils-react.svg?style=flat&color=brightgreen)](https://www.npmjs.com/package/antiutils-react)
 [![gzip size](https://badgen.net/bundlephobia/minzip/antiutils-react?color=green)](https://bundlephobia.com/result?p=antiutils-react)
 [![tree shaking](https://badgen.net/bundlephobia/tree-shaking/antiutils-react)](https://bundlephobia.com/result?p=antiutils-react)
+[![types](https://img.shields.io/npm/types/antiutils-react?color=brightgreen)](https://www.npmjs.com/package/antiutils-react)
 
 Glue between [Antiutils](https://github.com/ivan7237d/antiutils) and React. Provides the following utilities:
 
