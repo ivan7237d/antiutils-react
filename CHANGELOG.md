@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file. See [standa
 
 ### [1.2.1](https://github.com/ivan7237d/antiutils-react/compare/v1.2.0...v1.2.1) (2021-02-06)
 
+Chore release.
+
 ## [1.2.0](https://github.com/ivan7237d/antiutils-react/compare/v1.1.0...v1.2.0) (2021-01-21)
 
 ### Features
