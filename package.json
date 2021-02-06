@@ -8,7 +8,7 @@
   "sideEffects": false,
   "repository": "https://github.com/ivan7237d/antiutils-react.git",
   "license": "MIT",
-  "keywords": [],
+  "keywords": ["antiutils", "react"],
   "scripts": {
     "prebuild": "rm -rf build",
     "build": "run-p build:*",
