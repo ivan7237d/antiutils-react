@@ -6,4 +6,4 @@
 
 Glue between [Antiutils](https://github.com/ivan7237d/antiutils) and React.
 
-Please refer to the [GitHub README](https://github.com/ivan7237d/antiutils-react) for full documentation.
+Please refer to the [GitHub README](https://github.com/ivan7237d/antiutils-react#readme) for full documentation.
