@@ -34,10 +34,11 @@
     "reset-hard": "git clean -dfx && git reset --hard && yarn",
     "release:prepare": "run-s test doc:html version doc:publish",
     "release": "run-s release:prepare",
-    "commit": "cz"
+    "commit": "cz",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | coveralls"
   },
   "engines": {
-    "node": ">=10"
+    "node": ">=14"
   },
   "devDependencies": {
     "@babel/preset-env": "7.12.11",
@@ -52,6 +53,7 @@
     "antiutils": "3.0.0",
     "babel-jest": "26.6.3",
     "commitizen": "4.2.2",
+    "coveralls": "3.1.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "7.8.0",
     "eslint-config-prettier": "6.11.0",
