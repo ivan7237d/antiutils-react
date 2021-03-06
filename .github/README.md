@@ -31,7 +31,7 @@ Requires `antiutils` and `react` as peer dependencies.
 ## Usage
 
 ```ts
-import { applyPipe, objectProp, StateView } from 'antiutils';
+import { objectProp, pipe, StateView } from 'antiutils';
 import {
   bindingProps,
   bindingPropsCheckbox,
@@ -50,7 +50,7 @@ const StatelessComponent = ({ stateView }: { stateView: StateView<State> }) => (
     {/* A textbox bound to 'b'. */}
     <input
       type="text"
-      {...applyPipe(
+      {...pipe(
         stateView,
         // Transforms values into `StateView<{ b: string; c: boolean }>`.
         objectProp('a'),
@@ -67,7 +67,7 @@ const StatelessComponent = ({ stateView }: { stateView: StateView<State> }) => (
     {/* A checkbox bound to 'c'. */}
     <input
       type="checkbox"
-      {...applyPipe(
+      {...pipe(
         stateView,
         objectProp('a'),
         objectProp('c'),
